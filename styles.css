@@ -2,15 +2,40 @@ body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #67392F;
+    color: #fff;
 }
 
-.sky {
-    background-color: rgb(104, 82, 14);
-    background-image: url('img/background.png');
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.clouds {
+    background-image: url('img/clouds.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    height: 100vh;
+}
+
+.sky {
+    background-color: #5BB2CE;
+    /* Height = viewport height - logo height - height  */
+    /* height: calc(100vh - 241.5px - 6vw - 115px); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    flex-grow: 1;
+}
+
+.grass {
+    background-image: url('img/grass.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 115px;
     width: 100%;
 }
 
@@ -30,16 +55,22 @@ body {
     width: 528px;
     height: 241.5px;
     max-width: 90vw;
+    max-height: 50vw;
     padding: 3vw;
     filter: drop-shadow(5px 5px 5px #333);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .bottom-row {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 0 10vw;
+    margin: 0 5vw;
 }
 
 .snake {
@@ -57,11 +88,18 @@ body {
 }
 
 .footer {
-    background-color: rgb(104, 82, 14);
+    margin: 10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    color: #eaeaea;
+}
+
+.footer a, .footer a:hover {
+    text-decoration: underline;
 }
 
 .cta-container {
-    color: #fff;
     font-weight: 600;
     font-size: 2rem;
 }
@@ -71,11 +109,40 @@ a, a:hover {
     text-decoration: inherit;
 }
 
+.text {
+    width: 80%;
+    margin: 2rem 0;
+}
+
+.text-inner {
+    font-size: 1.25rem;
+    line-height: 1.4em;
+}
+
+.text a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 
 
 
 @media screen and (max-width: 800px) {
     .bottom-row {
         flex-direction: column-reverse;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .cta-container {
+        text-align: center;
+    }
+
+    .sky {
+        flex-direction: column;
+        align-content: flex-start;
     }
 }
