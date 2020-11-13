@@ -76,6 +76,7 @@ body {
 .snake {
     object-fit: contain;
     width: 30vw;
+    align-self: center; /* this ensures proper sizing on Safari */
     padding: 25px;
     filter: drop-shadow(2px 2px 2px #333);
 }
