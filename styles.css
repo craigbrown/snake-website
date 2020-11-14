@@ -15,7 +15,7 @@ body {
 .clouds {
     background-image: url('img/clouds.png');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover;
 }
 
@@ -32,9 +32,8 @@ body {
 
 .grass {
     background-image: url('img/grass.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: top;
-    background-size: cover;
     height: 115px;
     width: 100%;
 }
@@ -125,6 +124,17 @@ a, a:hover {
     font-weight: 600;
 }
 
+.preview {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview .sky {
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+}
 
 
 
